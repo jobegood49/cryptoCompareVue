@@ -2,6 +2,9 @@
 <body>
 <div id="app">
     <h1>{{ message }}</h1>
+    <p v-if="secretMessage">this is a secret HTML element</p>
+    <p v-else>Welcome to the website</p>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -9,7 +12,8 @@
     let app = new Vue({
         el: "#app",
         data: {
-            message: "Hi!"
+            message: "Hi!",
+            secretMessage: true
         }
     });
 </script>
