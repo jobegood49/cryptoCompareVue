@@ -13,6 +13,7 @@
     <p>what is your favourite colour</p>
     <input v-model="color" type="text">
     <p>your favourite color is ... {{ color }}</p>
+    <input type="button" v-on:click="capitalizeColor" value="Capitalize">
 
 </div>
 
@@ -30,6 +31,12 @@
                 "chicken"
             ],
             color: ''
+        },
+        methods: {
+            capitalizeColor: function() {
+                this.color = this.color.toUpperCase();
+            }
+
         }
     });
 </script>
