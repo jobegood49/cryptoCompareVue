@@ -5,6 +5,11 @@
     <p v-if="secretMessage">this is a secret HTML element</p>
     <p v-else>Welcome to the website</p>
 
+    <p>Shopping list</p>
+    <ol>
+        <li v-for="item in shoppingList">{{item}}</li>
+    </ol>
+
 </div>
 
 <script src="https://unpkg.com/vue"></script>
@@ -13,7 +18,13 @@
         el: "#app",
         data: {
             message: "Hi!",
-            secretMessage: true
+            secretMessage: true,
+            shoppingList: [
+                "milk",
+                "eggs",
+                "steak",
+                "chicken"
+            ]
         }
     });
 </script>
